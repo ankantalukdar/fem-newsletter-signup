@@ -4,11 +4,12 @@ document.getElementById('submitButton').addEventListener('click', function(event
   var errorMessage = document.querySelector('.notification .error');
   var emailInput = document.getElementById('emailInput');
   var submitButton = document.getElementById('submitButton');
+  var hero = document.querySelector('.hero');
 
   if (email.trim() === '') {
     errorMessage.textContent = 'Please enter an email.';
     errorMessage.style.display = 'block';
-    errorMessage.style.color = 'gray';
+    errorMessage.style.color = 'red';
     emailInput.style.border = '1px solid red';
   } else if (!validateEmail(email)) {
     errorMessage.textContent = 'Valid email required.';
@@ -19,7 +20,8 @@ document.getElementById('submitButton').addEventListener('click', function(event
     emailInput.style.border = '';
     errorMessage.style.display = 'none';
     emailInput.value = '';
-    successMessage.style.display = 'block';
+    hero.style.display = 'none';
+    successMessage.style.display = 'flex';
   }
 });
 
@@ -33,8 +35,10 @@ function validateEmail(email) {
 
 document.querySelector('.close-button').addEventListener('click', function() {
   var successDiv = document.querySelector('.success');
+  var hero = document.querySelector('.hero');
   if (successDiv) {
     successDiv.style.display = 'none';
+    hero.style.display = 'block';
   }
 });
 
