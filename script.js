@@ -52,10 +52,10 @@ function checkViewportWidth() {
   const mobileDiv = document.querySelector('.mobile-image');
   const desktopDiv = document.querySelector('.desktop-image');
 
-  if (viewportWidth > 768 && mobileDiv && desktopDiv) {
+  if (viewportWidth > 887 && mobileDiv && desktopDiv) {
       mobileDiv.style.display = 'none';
       desktopDiv.style.display = 'block';
-    } else if (viewportWidth <= 768 && mobileDiv && desktopDiv) {
+    } else if (viewportWidth <= 887 && mobileDiv && desktopDiv) {
       mobileDiv.style.display = 'block';
       desktopDiv.style.display = 'none';
   }
