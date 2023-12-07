@@ -1,0 +1,17 @@
+:root {
+  /* colors */
+  --tomato: hsl(4, 100%, 67%);
+  --slate-grey: hsl(234, 29%, 20%);
+  --grey: hsl(231, 7%, 60%);
+  --bg-color: hsl(235, 18%, 26%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.success {
+  display: none;
+}
